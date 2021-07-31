@@ -1,0 +1,10 @@
+Problem: 
+
+- how to create a instance in each az zone in terraform
+- How to check instance type is present in each AZ zone or not. -- give me the AZ list in particular region where by desired EC2 instance type is supported. 
+
+
+
+# Determine which Availability Zones support your instance type
+aws ec2 describe-instance-type-offerings --location-type availability-zone  --filters Name=instance-type,Values=t3.micro --region us-east-1 --output table
+
